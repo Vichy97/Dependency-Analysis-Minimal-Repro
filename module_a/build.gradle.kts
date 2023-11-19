@@ -10,7 +10,7 @@ android {
   defaultConfig {
     minSdk = 24
 
-    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    testInstrumentationRunner = "com.vincent.module_b.CustomTestInstrumentationRunner"
     consumerProguardFiles("consumer-rules.pro")
   }
 
@@ -31,6 +31,7 @@ android {
 
 dependencies {
   testImplementation("junit:junit:4.13.2")
+  androidTestImplementation(project(":module_b"))
   androidTestImplementation("androidx.test.ext:junit:1.1.5")
   androidTestImplementation("androidx.test:monitor:1.6.1")
   androidTestImplementation("junit:junit:4.13.2")
